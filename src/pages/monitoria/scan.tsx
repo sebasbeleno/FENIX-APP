@@ -14,7 +14,7 @@ export default function Page() {
     switch (step) {
       case 1:
         return (
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center w-full h-full">
             <h1 className="text-2xl">Escanea el código QR</h1>
             <QrReader
               onResult={(result, error) => {
@@ -61,10 +61,8 @@ export default function Page() {
   };
 
   return (
-    <Layout>
-      <div className="flex flex-col justify-center items-center">
-        {renderStepts()}
-      </div>
-    </Layout>
+    <div className="flex flex-col justify-center items-center h-screen w-screen">
+      {renderStepts()}
+    </div>
   );
 }
