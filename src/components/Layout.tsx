@@ -14,7 +14,7 @@ export default function Layout({ children, user, title }: LayoutProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="min-h-screen">
-        <Navbar user={user} />
+        <Navbar />
         <main className="flex flex-row h-screen p-4">{children}</main>
       </div>
     </>
