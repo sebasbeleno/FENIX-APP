@@ -10,7 +10,6 @@ export default function Page() {
     setstep(3);
   };
 
-
   const renderStepts = () => {
     switch (step) {
       case 1:
@@ -60,9 +59,8 @@ export default function Page() {
         break;
     }
   };
-  }
 
-    return (
+  return (
     <Layout>
       <div className="flex flex-col justify-center items-center">
         {renderStepts()}
