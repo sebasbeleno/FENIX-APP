@@ -6,7 +6,7 @@ interface LayoutProps {
   title?: string;
 }
 
-export default function Layout({ children, user, title }: LayoutProps) {
+export default function Layout({ children, title }: LayoutProps) {
   return (
     <>
       <Head>
