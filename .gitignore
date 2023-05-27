@@ -33,3 +33,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+fenix-nova-firebase-adminsdk-n6f0m-41e2e8386a.json
