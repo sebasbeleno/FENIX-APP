@@ -12,14 +12,14 @@ export default function Page() {
       <QrReader
         onResult={(result, error) => {
           if (!!result) {
-            setData(result?.text);
+            setData(result?.getText());
           }
 
           if (!!error) {
             console.info(error);
           }
         }}
-        style={{ width: "100%", height: "100%" }}
+        className="w-full h-full"
         constraints={{ facingMode: "environment" }}
       />
       <p>{data}</p>
