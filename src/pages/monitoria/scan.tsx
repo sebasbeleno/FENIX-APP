@@ -7,6 +7,15 @@ export default function Page() {
   const [data, setData] = useState("No result");
 
   const onConfirm = () => {
+    const json = {
+      userid: "1",
+      claseid: data,
+    };
+
+    const string = JSON.stringify(json);
+
+    localStorage.setItem("asistencia", string);
+
     setstep(3);
   };
 
@@ -14,7 +23,7 @@ export default function Page() {
     switch (step) {
       case 1:
         return (
-          <div className="flex flex-col justify-center items-center w-full h-full">
+          <div className="flex flex-col justify-center items-center w-full h-full ">
             <h1 className="text-2xl">Escanea el código QR</h1>
             <QrReader
               onResult={(result, error) => {
@@ -35,7 +44,7 @@ export default function Page() {
       case 2:
         return (
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-2xl">Confirmar asistencia? clase ${data}</h1>
+            <h1 className="text-2xl">Confirmar asistencia? clase {data}</h1>
             <div className="flex flex-row justify-center items-center">
               <button
                 onClick={onConfirm}
